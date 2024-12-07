@@ -183,6 +183,7 @@ picture{
     color: hsl(var(--clr-orange));
 }
 .cta-link-primary{
+    cursor: pointer;
     display: flex;
     padding: 0.5rem 1.5rem;
     font-weight: 700;
@@ -203,8 +204,8 @@ picture{
 .cta-link-primary:focus,
 .cta-link-primary:active{
     border: none;
-    background-color: hsl(var(--clr-brown));
-    color: hsl(var(--clr-orange));
+    background-color: hsl(var(--clr-orange), 0.7);
+    color: hsl(var(--clr-brown));
 }
 .cta-link-secondary:hover,
 .cta-link-secondary:focus,
