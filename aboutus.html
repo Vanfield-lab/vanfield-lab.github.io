@@ -8,31 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="loadComponents.js"></script>
 </head>
 <body>
 
-    <header class="header">
-        <div  class="container row">
-        
-            <a class="logo" href="index.html">
-              <img src="images/Logo.svg" alt="Logo">
-            </a>
-        
-            <nav class="nav ff-serif-text">
-                <ul>
-                    <li><a class="page-link" href="index.html">Home</a></li>
-                    <li><a class="page-link" href="#aboutus">About us</a></li>
-                    <li><a class="page-link" href="menu.html">Menu</a></li>
-                    <li><a class="page-link" href="gallery.html">Gallery</a></li>
-                    <li><a class="page-link" href="contact.html">Contact</a></li>                    
-                </ul>   
-                
-                <ul>
-                    <li><a id="openModalBtn" class="cta-link-primary" >Reserve now</a></li> 
-                </ul>  
-            </nav>
-        </div>
-    </header>
+    <header class="header"></header>
 
     <div class="hero-section other-pages-hero">
         <img class="image-header" src="images/aboutus header.png" alt="header">
@@ -123,83 +103,10 @@
         </div>
     </section>
 
-    <footer class="bg-brown footer">
-        <div class="container flex footer-wrapper">
-        
-            <div  class="row footer-content">
-    
-                <a class="logo" href="#">
-                    <img src="images/Logo.svg" alt="Logo">
-                </a>
-            
-                <nav class="nav ff-serif-text">
-                    <ul>
-                        <li><a class="page-link" href="aboutus.html">About us</a></li>
-                        <li><a class="page-link" href="gallery.html">Gallery</a></li>
-                        <li><a class="page-link" href="contact.html">Location</a></li>                    
-                    </ul>   
-                    
-                    <ul>
-                        <li class="row">
-                            <div class="row phone">
-                                <img src="images/Phone.png" alt="Phone">
-                                <p class="text-beige">+23324 3871 211</p>
-                            </div>
-                            <div>
-                                <img src="images/Instagram.png" alt="Instagram">
-                                <img src="images/Facebook.png" alt="Facebook">
-                            </div>
-                        </li> 
-                    </ul>  
-                </nav>
-            </div>
-            <div class="row copyright"><p class="text-beige fs-300">&copy;2024. FunBite Restaurant</p></div>
+    <div id="modal-container"></div>
 
-            
+    <footer></footer>
 
-        </div>
-    </footer>
-
-    <!-- Reserve now Modal -->
-  <div id="reservationModal" class="modal">
-    <div class="modal-content bg-beige">
-      <div class="modal-header">
-        <h2 class="form-title fs-600 ff-serif-heading text-green">Reserve Now</h2>
-        <button class="close-btn" id="closeModalBtn">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.6666 31.6667L8.33325 29.3333L17.6666 20L8.33325 10.6667L10.6666 8.33334L19.9999 17.6667L29.3333 8.33334L31.6666 10.6667L22.3333 20L31.6666 29.3333L29.3333 31.6667L19.9999 22.3333L10.6666 31.6667Z" fill="#4B2E2E"/>
-                </svg>
-        </button>
-          
-      </div>
-      <form>
-        <label for="name">Name <span>*</span></label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-
-        <label for="phone">Phone number <span>*</span></label>
-        <input type="tel" id="phone" placeholder="Enter your phone number" required>
-
-        <label for="people">Number of people <span>*</span></label>
-        <select id="people" required>
-          <option value="" disabled selected>Value</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4+">4 or more</option>
-        </select>
-
-        <label for="date">Date <span>*</span></label>
-        <input type="date" id="date" required>
-
-        <label for="time">Time <span>*</span></label>
-        <input type="time" id="time" required>
-
-        <button type="submit" class="submit-btn cta-link-primary">Submit</button>
-      </form>
-    </div>
-  </div>
-
-    
 </body>
 
 <script src="index.js"></script>

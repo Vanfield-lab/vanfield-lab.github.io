@@ -1,21 +1,14 @@
+document.addEventListener("click", (e) => {
+  const modal = document.querySelector("#reservationModal");
+  const closeModalBtn = document.querySelector("#closeModalBtn");
 
-    const openModalBtn = document.getElementById("openModalBtn");
-    const closeModalBtn = document.getElementById("closeModalBtn");
-    const modal = document.getElementById("reservationModal");
-
-    // Open Modal
-    openModalBtn.addEventListener("click", () => {
+  // Open Modal
+  if (e.target.id === "openModalBtn") {
       modal.style.display = "block";
-    });
-
-    // Close Modal
-    closeModalBtn.addEventListener("click", () => {
+  }
+  
+  // Close Modal (click on close button or modal background)
+  if (e.target === modal || e.target.closest("#closeModalBtn")) {
       modal.style.display = "none";
-    });
-
-    // Close Modal if clicking outside the modal-content
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
+  }
+});
