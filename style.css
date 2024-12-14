@@ -121,7 +121,7 @@ picture{
     
 }
 .header{
-    background-color: var(hsl(--clr-beige), 0.35);
+    background-color: hsl(var(--clr-beige), 0.3);
     padding: 0.5rem 0;
     backdrop-filter: blur(15px);
     position: fixed;
@@ -140,6 +140,7 @@ picture{
 }
 
 .logo{
+
     display: inline-block;
     text-decoration: none;
     height: auto;
@@ -171,7 +172,7 @@ picture{
 }
 
 .page-link{
-    font-weight: 100;
+    font-weight: 200;
     display: block;
     text-decoration: none;
     color: hsl(var(--clr-beige));
@@ -267,7 +268,7 @@ picture{
   }
 
   .content p {
-    width: 40%;
+    
     margin-bottom: 30px;
 
   }
