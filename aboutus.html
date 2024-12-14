@@ -28,7 +28,7 @@
                 </ul>   
                 
                 <ul>
-                    <li><a class="cta-link-primary" >Reserve now</a></li> 
+                    <li><a id="openModalBtn" class="cta-link-primary" >Reserve now</a></li> 
                 </ul>  
             </nav>
         </div>
@@ -160,6 +160,47 @@
         </div>
     </footer>
 
+    <!-- Reserve now Modal -->
+  <div id="reservationModal" class="modal">
+    <div class="modal-content bg-beige">
+      <div class="modal-header">
+        <h2 class="form-title fs-600 ff-serif-heading text-green">Reserve Now</h2>
+        <button class="close-btn" id="closeModalBtn">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.6666 31.6667L8.33325 29.3333L17.6666 20L8.33325 10.6667L10.6666 8.33334L19.9999 17.6667L29.3333 8.33334L31.6666 10.6667L22.3333 20L31.6666 29.3333L29.3333 31.6667L19.9999 22.3333L10.6666 31.6667Z" fill="#4B2E2E"/>
+                </svg>
+        </button>
+          
+      </div>
+      <form>
+        <label for="name">Name <span>*</span></label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="phone">Phone number <span>*</span></label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="people">Number of people <span>*</span></label>
+        <select id="people" required>
+          <option value="" disabled selected>Value</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4+">4 or more</option>
+        </select>
+
+        <label for="date">Date <span>*</span></label>
+        <input type="date" id="date" required>
+
+        <label for="time">Time <span>*</span></label>
+        <input type="time" id="time" required>
+
+        <button type="submit" class="submit-btn cta-link-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
     
 </body>
+
+<script src="index.js"></script>
 </html>
