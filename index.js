@@ -12,3 +12,15 @@ document.addEventListener("click", (e) => {
       modal.style.display = "none";
   }
 });
+
+//navbar changes bg when scrolled
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    // Add 'scrolled' class when page is scrolled down 50px
+    header.classList.add("scrolled");
+  } else {
+    // Remove 'scrolled' class when back to the top
+    header.classList.remove("scrolled");
+  }
+});

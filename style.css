@@ -198,7 +198,7 @@ input:focus, select:focus {
 
 
 
-/* Animation */
+/* modal Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -220,8 +220,13 @@ input:focus, select:focus {
     position: fixed;
     top: 0;
     width: 100%;
+    transition: background-color 0.3s ease;
     z-index: 4;
 
+}
+.header.scrolled{
+  background-color: hsl(var(--clr-brown));
+  box-shadow: 0 2px 5px hsl(var(--clr-orange), 0.3);
 }
 
 .row{
