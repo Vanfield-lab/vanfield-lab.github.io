@@ -221,7 +221,7 @@ input:focus, select:focus {
     top: 0;
     width: 100%;
     transition: background-color 0.3s ease;
-    z-index: 4;
+    z-index: 1000;
 
 }
 .header.scrolled{

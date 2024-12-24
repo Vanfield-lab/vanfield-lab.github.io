@@ -14,13 +14,21 @@ document.addEventListener("click", (e) => {
 });
 
 //navbar changes bg when scrolled
+// Select the navbar
 const header = document.getElementById("header");
-window.addEventListener("scroll", () => {
+
+// Function to handle the scroll behavior
+function handleScroll() {
   if (window.scrollY > 50) {
-    // Add 'scrolled' class when page is scrolled down 50px
     header.classList.add("scrolled");
   } else {
-    // Remove 'scrolled' class when back to the top
     header.classList.remove("scrolled");
   }
-});
+}
+
+
+// Run scroll check on page load
+window.addEventListener("load", handleScroll);
+
+// Listen to scroll events
+window.addEventListener("scroll", handleScroll);
