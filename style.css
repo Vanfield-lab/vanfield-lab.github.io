@@ -486,8 +486,11 @@ input:focus, select:focus {
   justify-content: center;
 }
 .other-pages-hero{
-  height: 350px;
+  padding-block: 2.5rem;
+  margin-top: 65px;
+  height: auto;
 }
+
 .other-pages-content{
   align-items: center;
 }
@@ -661,6 +664,14 @@ input:focus, select:focus {
     padding: 1rem;
     scroll-snap-align: start;
     
+  }
+  .other-pages-hero{
+    padding-block: 0;
+    margin-top: 65px;
+    height: auto;
+  }
+  .other-pages-content h1{
+    font-size: var(--fs-600);
   }
   .footer-content{
     flex-direction: column;
