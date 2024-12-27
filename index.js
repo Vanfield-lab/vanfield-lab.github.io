@@ -13,7 +13,31 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//navbar changes bg when scrolled
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () =>{
+        nav.classList.toggle('nav--visible');
+})
+
+function toggleMenu() {
+        const navLinks = document.querySelector('.nav');
+        const hamburger = document.querySelector('.hamburger');
+      
+        navLinks.classList.toggle('nav--visible');
+        hamburger.classList.toggle('close');
+}
+function closeMenu() {
+        const navVisible = document.querySelector('.nav--visible');
+        const navLinks = document.querySelector('.page-link');
+        const hamburger = document.querySelector('.hamburger');
+      
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('close');
+        navVisible.classList.remove('nav--visible');
+}
+
+/*navbar changes bg when scrolled
 // Select the navbar
 const header = document.getElementById("header");
 
@@ -31,4 +55,4 @@ function handleScroll() {
 window.addEventListener("load", handleScroll);
 
 // Listen to scroll events
-window.addEventListener("scroll", handleScroll);
+window.addEventListener("scroll", handleScroll);*/
