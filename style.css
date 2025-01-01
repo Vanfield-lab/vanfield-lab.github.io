@@ -444,6 +444,12 @@ input:focus, select:focus {
   scroll-snap-align: start;
   
 }
+.review-card.active {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .user{
   gap: 0.5rem;
 
@@ -462,6 +468,8 @@ input:focus, select:focus {
 }
 .dot.active {
   background-color: hsl(var(--clr-orange));
+  transform: scale(1.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .footer{
@@ -542,6 +550,79 @@ input:focus, select:focus {
   margin: 20px 0;
 }
 
+.gallery-section{
+  gap: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay styles */
+.image-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.image-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  
+}
+
+.image-overlay .close-btn,
+.image-overlay .prev-btn,
+.image-overlay .next-btn {
+  position: absolute;
+  background-color: hsl(var(--clr-brown), 0.7);
+  color: hsl(var(--clr-beige));
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.image-overlay .close-btn {
+  top: 20px;
+  right: 20px;
+}
+
+.image-overlay .prev-btn {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.image-overlay .next-btn {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+
 @media (max-width: 1000px) {
  
   .nav-toggle{
@@ -568,7 +649,7 @@ input:focus, select:focus {
       display: block;
       width: 30px;
       height: 3px;
-      background-color: hsl(var(--clr-white));
+      background-color: hsl(var(--clr-beige));
       margin: 4px;
       transition: transform 0.3s ease;
     }
@@ -608,10 +689,10 @@ input:focus, select:focus {
 
     }
   .nav--visible {
-    background-color: hsl(var(--clr-brown), 0.90);
+    background-color: hsl(var(--clr-brown), 0.99);
     backdrop-filter: blur(93px);
     width: 100%;
-    height: fit-content;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -640,7 +721,7 @@ input:focus, select:focus {
 
   .content h1 {
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 700;
 
   }
@@ -664,7 +745,9 @@ input:focus, select:focus {
     padding: 1rem;
     scroll-snap-align: start;
     
+    
   }
+  
   .other-pages-hero{
     padding-block: 0;
     margin-top: 65px;
@@ -691,6 +774,9 @@ input:focus, select:focus {
   .history-items-middle{
     padding: 1rem;
   
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer-content{
     flex-direction: column;
