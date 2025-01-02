@@ -561,14 +561,14 @@ input:focus, select:focus {
   padding: 20px;
 }
 
-.gallery img {
+.gallery-image {
   width: 100%;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
-.gallery img:hover {
+.gallery-image:hover {
   transform: scale(1.05);
 }
 
@@ -586,7 +586,7 @@ input:focus, select:focus {
   z-index: 1000;
 }
 
-.image-overlay img {
+.overlay-image {
   max-width: 90%;
   max-height: 80%;
   
