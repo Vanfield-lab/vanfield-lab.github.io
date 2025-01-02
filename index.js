@@ -16,9 +16,9 @@ document.addEventListener("click", (e) => {
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.nav');
 
-navToggle.addEventListener('click', () =>{
-        nav.classList.toggle('nav--visible');
-})
+// navToggle.addEventListener('click', () =>{
+//         nav.classList.toggle('nav--visible');
+// })
 
 function toggleMenu() {
         const navLinks = document.querySelector('.nav');
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Attach scroll event to update the active review
-  reviewContainer.addEventListener("scroll", updateActiveReview);
+   reviewContainer.addEventListener("scroll", updateActiveReview);
 
   // Add click event to dots for navigation
   dots.forEach((dot, index) => {
@@ -99,7 +99,7 @@ window.addEventListener("load", handleScroll);
 window.addEventListener("scroll", handleScroll);*/
 
 
-const galleryItems = document.querySelectorAll("gallery-image");
+const galleryItems = document.querySelectorAll(".gallery-image");
 const imageOverlay = document.getElementById("imageOverlay");
 const overlayImage = document.getElementById("overlayImage");
 const closeOverlay = document.getElementById("closeOverlay");
@@ -141,5 +141,7 @@ imageOverlay.addEventListener("click", (e) => {
     hideOverlay();
   }
 });
+console.log(galleryItems);
+
 
 
